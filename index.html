@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NarcissisticLoner</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NarcissisticLoner</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="search">
+        <input type="text" placeholder="Search...">
+        <button>Search</button>
+    </section>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to NarcissisticLoner. Here, I share thoughts on various topics.</p>
+    </section>
+    
+    <section id="blogs">
+        <h2>Blogs</h2>
+        <div id="blog-container">
+            <!-- Blog posts will be dynamically added here -->
+        </div>
+    </section>
+    
+    <section id="comments">
+        <h2>Comments</h2>
+        <button id="toggle-comments">Toggle Comments</button>
+        <div id="comment-section" style="display: none;">
+            <textarea placeholder="Write a comment..."></textarea>
+            <button>Post</button>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Follow me on: 
+            <a href="#">Twitter</a> | 
+            <a href="#">Instagram</a>
+        </p>
+    </footer>
+    
+    <script>
+        document.getElementById('toggle-comments').addEventListener('click', function() {
+            let commentSection = document.getElementById('comment-section');
+            commentSection.style.display = commentSection.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
